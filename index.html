@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TeaVision &mdash; AI Powered Ceylon Tea Quality System</title>
+<meta name="description" content="TeaVision: An integrated AI framework for Ceylon tea leaf quality assessment using YOLOv8 + SAHI detection, explainable ML grading, and a RAG-based knowledge base." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============= NAVBAR ============= -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="brand">
+      <span class="brand-leaf"><i class="fa-solid fa-leaf"></i></span>
+      <span class="brand-text">TeaVision</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#research">Research</a>
+      <a href="#solution">Solution</a>
+      <a href="#components">Components</a>
+      <a href="#milestones">Milestones</a>
+      <a href="#documents">Documents</a>
+      <a href="#team">Team</a>
+      <a href="#results">Results</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<!-- ============= HERO ============= -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">IT22154576 &middot; Research Project</p>
+      <h1>Hi, Welcome to <span class="grad-text">TeaVision</span></h1>
+      <p class="hero-tags">
+        <span>YOLOv8 + SAHI</span><i>|</i>
+        <span>Explainable ML Grading</span><i>|</i>
+        <span>RAG Knowledge Base</span><i>|</i>
+        <span>Mobile Sync</span>
+      </p>
+      <p class="hero-desc">
+        An integrated AI framework for the Sri Lankan tea industry &mdash; combining
+        computer vision, transparent machine learning, and semantic search to deliver
+        consistent, evidence-based tea leaf quality assessment from field to factory.
+      </p>
+      <div class="hero-cta">
+        <a href="#solution" class="btn btn-primary">Explore the Solution <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#research" class="btn btn-ghost">Read Our Research</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-stats">
+        <div class="stat"><h3>275</h3><p>Field Images</p></div>
+        <div class="stat"><h3>25</h3><p>Engineered Features</p></div>
+        <div class="stat"><h3>473</h3><p>RAG Chunks</p></div>
+        <div class="stat"><h3>96%</h3><p>Grader Accuracy</p></div>
+      </div>
+      <div class="hero-pillars">
+        <div class="pillar"><i class="fa-solid fa-eye"></i><span>Detection</span></div>
+        <div class="pillar"><i class="fa-solid fa-chart-column"></i><span>Grading</span></div>
+        <div class="pillar"><i class="fa-solid fa-book-open"></i><span>Knowledge</span></div>
+        <div class="pillar"><i class="fa-solid fa-mobile-screen"></i><span>Mobile</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll"><a href="#research"><i class="fa-solid fa-angles-down"></i></a></div>
+</section>
+
+<!-- ============= RESEARCH ============= -->
+<section class="section" id="research">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Our Research</p>
+      <h2>From Manual Inspection to <span class="grad-text">Transparent AI</span></h2>
+      <p class="section-sub">
+        The Sri Lankan tea industry depends on subjective visual inspection that fails
+        on subtle quality cues. TeaVision replaces guesswork with measurable, explainable AI.
+      </p>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
+        <h3>Project Scope</h3>
+        <p>
+          Build a unified web platform that ingests tea leaf imagery from a desktop
+          dropzone, browser camera, or QR-bridged smartphone, then routes it through
+          three specialised AI subsystems with full traceability of decisions.
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h3>Research Gap</h3>
+        <p>
+          Off-the-shelf detectors compress 4K phone photos to 640&times;640px, mathematically
+          erasing the tiny buds and damage spots that determine grade. Existing models
+          also act as black boxes, eroding farmer and factory trust.
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-circle-question"></i></div>
+        <h3>Research Problem</h3>
+        <p>
+          How can computer vision and machine learning deliver <em>microscopically-aware</em>
+          and <em>explainable</em> tea quality assessments while making agricultural
+          treatment knowledge instantly searchable in the field?
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-flag-checkered"></i></div>
+        <h3>Main Objective</h3>
+        <p>
+          Deliver an integrated, evidence-driven assessment platform that detects,
+          classifies, and contextualises tea leaf quality with verifiable accuracy,
+          deployable on a standard factory-grade workstation.
+        </p>
+      </div>
+    </div>
+
+    <div class="objectives">
+      <h3 class="sub-h">Specific Objectives</h3>
+      <div class="grid grid-4">
+        <div class="obj"><span>01</span><p>Preserve microscopic features via SAHI-sliced YOLOv8 inference.</p></div>
+        <div class="obj"><span>02</span><p>Replace black-box CNNs with 25 OpenCV-derived, auditable features.</p></div>
+        <div class="obj"><span>03</span><p>Gate inference with an EXIF + variance based environmental QA score.</p></div>
+        <div class="obj"><span>04</span><p>Surface tea agronomy knowledge through a semantic RAG retrieval layer.</p></div>
+      </div>
+    </div>
+
+    <div class="counter-row">
+      <div class="counter"><h3>275</h3><p>Captured Images</p></div>
+      <div class="counter"><h3>66</h3><p>Capture Sessions</p></div>
+      <div class="counter"><h3>156</h3><p>RAG Documents</p></div>
+      <div class="counter"><h3>13</h3><p>Tea Categories</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= SOLUTION ============= -->
+<section class="section section-alt" id="solution">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Our Solution</p>
+      <h2>Three AI Pipelines, One <span class="grad-text">Unified Dashboard</span></h2>
+      <p class="section-sub">
+        TeaVision delivers detection, grading, and knowledge retrieval through a clean
+        React frontend backed by a FastAPI service hosting the AI engines.
+      </p>
+    </div>
+
+    <div class="grid grid-3 sol-grid">
+      <div class="sol-card">
+        <div class="sol-num">01</div>
+        <i class="fa-solid fa-eye sol-icon"></i>
+        <h3>Tea Leaf Detection</h3>
+        <p>
+          YOLOv8s fine-tuned at 1280&times;1280 over 7 classes &mdash;
+          <code>Fresh_Bud_1</code>, <code>Fresh_Bud_2</code>, <code>Old_Leaf</code>,
+          <code>Damaged_Leaf</code>, <code>Damage_Spot</code>, <code>Coarse_pluck</code>,
+          <code>stems</code> &mdash; with SAHI slicing for tiny objects and an A&ndash;D
+          quality grade derived from class ratios.
+        </p>
+        <ul class="sol-points">
+          <li><i class="fa-solid fa-check"></i> 148 &rarr; 726 augmented training images</li>
+          <li><i class="fa-solid fa-check"></i> mAP@0.5 = 32.5% &middot; AdamW, 20 epochs</li>
+          <li><i class="fa-solid fa-check"></i> SAHI overlap tiling + NMS merge</li>
+        </ul>
+      </div>
+
+      <div class="sol-card">
+        <div class="sol-num">02</div>
+        <i class="fa-solid fa-chart-column sol-icon"></i>
+        <h3>Grade My Tea</h3>
+        <p>
+          Explainable binary classifier: 25 OpenCV features (11 colour, 3 texture,
+          7 shape, 4 quality) selected from a 56-candidate pool via ANOVA F-test,
+          then routed through 10 classical models. AdaBoost wins at <strong>96.36%</strong>
+          test accuracy with 0 false positives.
+        </p>
+        <ul class="sol-points">
+          <li><i class="fa-solid fa-check"></i> 5-fold stratified cross-validation</li>
+          <li><i class="fa-solid fa-check"></i> Session-based 80/20 split (no leakage)</li>
+          <li><i class="fa-solid fa-check"></i> Per-feature contribution breakdown</li>
+        </ul>
+      </div>
+
+      <div class="sol-card">
+        <div class="sol-num">03</div>
+        <i class="fa-solid fa-book-open sol-icon"></i>
+        <h3>Ceylon Tea Knowledge Base</h3>
+        <p>
+          Hybrid RAG over <strong>156 documents / 473 chunks</strong> across 13
+          tea-domain categories. Sentence-BERT (<code>all-MiniLM-L6-v2</code>, 384-dim)
+          for dense retrieval, BM25 for sparse, and Reciprocal Rank Fusion
+          (&alpha; = 0.5) to combine them.
+        </p>
+        <ul class="sol-points">
+          <li><i class="fa-solid fa-check"></i> MRR = 1.00 &middot; NDCG@5 = 1.00</li>
+          <li><i class="fa-solid fa-check"></i> FAISS cosine-similarity index</li>
+          <li><i class="fa-solid fa-check"></i> 3-tab UI: Search, Browse, Categories</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sol-extra">
+      <div class="sol-extra-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+      <div>
+        <h3>Bonus &mdash; QR Connect: Mobile-to-Desktop Bridge</h3>
+        <p>
+          A FastAPI LAN bridge generates a QR code that opens a lightweight capture page
+          on the user&rsquo;s phone. Photos taken in the field stream straight into the
+          desktop dropzone &mdash; no email, no cables, no workflow friction.
+        </p>
+      </div>
+    </div>
+
+    <div class="tech-block">
+      <h3 class="sub-h">Used Technologies</h3>
+      <div class="tech-grid">
+        <div class="tech"><i class="fa-brands fa-python"></i><span>Python</span></div>
+        <div class="tech"><i class="fa-solid fa-bolt"></i><span>FastAPI</span></div>
+        <div class="tech"><i class="fa-brands fa-react"></i><span>React</span></div>
+        <div class="tech"><i class="fa-solid fa-robot"></i><span>YOLOv8</span></div>
+        <div class="tech"><i class="fa-solid fa-layer-group"></i><span>SAHI</span></div>
+        <div class="tech"><i class="fa-solid fa-camera"></i><span>OpenCV</span></div>
+        <div class="tech"><i class="fa-solid fa-flask"></i><span>scikit-learn</span></div>
+        <div class="tech"><i class="fa-solid fa-database"></i><span>MongoDB</span></div>
+        <div class="tech"><i class="fa-solid fa-vector-square"></i><span>MiniLM</span></div>
+        <div class="tech"><i class="fa-solid fa-network-wired"></i><span>BM25</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= COMPONENTS ============= -->
+<section class="section" id="components">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Project 25-26J-133 &middot; Components</p>
+      <h2>Four Researchers, <span class="grad-text">Four Components</span></h2>
+      <p class="section-sub">
+        AI-Driven Tea Quality and Production Improvements &mdash; built from four
+        complementary research components, each owned and engineered by a team member.
+      </p>
+    </div>
+
+    <div class="grid grid-2 comp-grid">
+
+      <!-- Component 1 -->
+      <div class="comp">
+        <div class="comp-head">
+          <div class="comp-id">IT22154576</div>
+          <h3>Tea Leaf Quality Grading &amp; Knowledge AI</h3>
+          <p class="comp-owner"><i class="fa-solid fa-user"></i> Nipuna</p>
+        </div>
+        <p class="comp-desc">
+          YOLOv8s + SAHI multi-class detection (7 classes), explainable
+          binary grading via 25 OpenCV features feeding 10 classical ML models,
+          plus a RAG-powered Ceylon Tea knowledge base over 156 documents and 473 chunks.
+        </p>
+        <div class="comp-stats">
+          <div><strong>96.36%</strong><span>AdaBoost test acc.</span></div>
+          <div><strong>32.5%</strong><span>YOLOv8 mAP@0.5</span></div>
+          <div><strong>1.00</strong><span>RAG MRR</span></div>
+        </div>
+        <div class="comp-tags">
+          <span>YOLOv8s</span><span>SAHI</span><span>AdaBoost</span><span>OpenCV</span>
+          <span>Sentence-BERT</span><span>FAISS</span><span>BM25</span><span>RRF</span><span>FastAPI</span>
+        </div>
+      </div>
+
+      <!-- Component 2 -->
+      <div class="comp">
+        <div class="comp-head">
+          <div class="comp-id">IT22XXXXXX</div>
+          <h3>Yield Logbook OCR Pipeline</h3>
+          <p class="comp-owner"><i class="fa-solid fa-user"></i> Harsha</p>
+        </div>
+        <p class="comp-desc">
+          Vision-based OCR pipeline that converts physical tea-yield logbook pages
+          into structured Excel spreadsheets. Cell-grid detection, per-cell crop
+          recognition, and template-driven export remove hours of manual data entry
+          at the factory.
+        </p>
+        <div class="comp-stats">
+          <div><strong>v4.11</strong><span>OCR pipeline</span></div>
+          <div><strong>XLSX</strong><span>Auto export</span></div>
+          <div><strong>0</strong><span>Cables required</span></div>
+        </div>
+        <div class="comp-tags">
+          <span>OpenCV</span><span>PaddleOCR</span><span>Tesseract</span>
+          <span>Excel</span><span>Python</span>
+        </div>
+      </div>
+
+      <!-- Component 3 -->
+      <div class="comp">
+        <div class="comp-head">
+          <div class="comp-id">IT22XXXXXX</div>
+          <h3>TeaVision Android Capture App</h3>
+          <p class="comp-owner"><i class="fa-solid fa-user"></i> Dinithi</p>
+        </div>
+        <p class="comp-desc">
+          Native Android (Kotlin / Jetpack Compose) capture app with 5 real-time quality gates:
+          blur (Laplacian &ge; 40), brightness (40&ndash;220), glare (&le; 5%), tilt (&lt; 15&deg;),
+          and stability (&lt; 0.5 m/s&sup2;). Combines a TF-Lite leaf segmenter with a HSV
+          fallback, and uses a printed QR code as a spatial calibration reference.
+        </p>
+        <div class="comp-stats">
+          <div><strong>275</strong><span>Field images</span></div>
+          <div><strong>78.4%</strong><span>Quality pass rate</span></div>
+          <div><strong>&plusmn;2 mm</strong><span>QR calibration</span></div>
+        </div>
+        <div class="comp-tags">
+          <span>Kotlin</span><span>Jetpack Compose</span><span>TF Lite</span>
+          <span>CameraX</span><span>QR Calibration</span>
+        </div>
+      </div>
+
+      <!-- Component 4 -->
+      <div class="comp">
+        <div class="comp-head">
+          <div class="comp-id">IT22XXXXXX</div>
+          <h3>Unified Web Dashboard &amp; UX</h3>
+          <p class="comp-owner"><i class="fa-solid fa-user"></i> Nimesh</p>
+        </div>
+        <p class="comp-desc">
+          Vite + React 19 dashboard that fuses all subsystems behind one navigation:
+          Detection, Grading, Knowledge Base, Logbook OCR, and the Mobile Data Viewer.
+          Hash routing, glassmorphism design system, and a QR Connect bridge over
+          the local network for instant phone-to-desktop image transfer.
+        </p>
+        <div class="comp-stats">
+          <div><strong>5</strong><span>Integrated pages</span></div>
+          <div><strong>13</strong><span>RAG categories</span></div>
+          <div><strong>LAN</strong><span>QR Connect bridge</span></div>
+        </div>
+        <div class="comp-tags">
+          <span>React 19</span><span>Vite</span><span>FastAPI</span>
+          <span>Recharts</span><span>QR Code</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= MILESTONES ============= -->
+<section class="section section-alt" id="milestones">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Our Milestones</p>
+      <h2>Project <span class="grad-text">Timeline</span></h2>
+      <p class="section-sub">Eight milestones taking TeaVision from problem framing to a deployed prototype.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item left">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <span class="tl-date">Aug 2024</span>
+          <h4>Project Proposal</h4>
+          <p>Defined scope, supervisor sign-off, and the four-pillar architecture.</p>
+          <span class="tl-mark">10%</span>
+        </div>
+      </div>
+      <div class="tl-item right">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <span class="tl-date">Sep 2024</span>
+          <h4>Literature Survey</h4>
+          <p>Reviewed YOLO variants, SAHI, RAG, and tea agronomy literature.</p>
+          <span class="tl-mark">15%</span>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <span class="tl-date">Oct 2024</span>
+          <h4>Dataset Construction</h4>
+          <p>275 field images across 66 capture sessions &middot; 148 annotated for YOLO &middot; augmented to 726 training samples in Roboflow.</p>
+          <span class="tl-mark">25%</span>
+        </div>
+      </div>
+      <div class="tl-item right">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <span class="tl-date">Dec 2024</span>
+          <h4>YOLOv8 + SAHI Training</h4>
+          <p>Fine-tuned YOLOv8s @ 1280px, AdamW, 20 epochs &middot; integrated SAHI tiling + NMS &middot; mAP@0.5 = 32.5%.</p>
+          <span class="tl-mark">40%</span>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <span class="tl-date">Jan 2025</span>
+          <h4>OpenCV Feature Pipeline</h4>
+          <p>25 of 56 features picked via ANOVA F-test &middot; 10 classical models trained &middot; AdaBoost wins at 96.36%.</p>
+          <span class="tl-mark">55%</span>
+        </div>
+      </div>
+      <div class="tl-item right">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <span class="tl-date">Feb 2025</span>
+          <h4>RAG Knowledge Base</h4>
+          <p>156 documents &rarr; 473 chunks &middot; MiniLM embeddings + FAISS + BM25 + RRF &middot; perfect MRR = 1.00.</p>
+          <span class="tl-mark">70%</span>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <span class="tl-date">Mar 2025</span>
+          <h4>Web Dashboard &amp; QR Sync</h4>
+          <p>Shipped the React UI, QR Connect bridge, and mobile capture page.</p>
+          <span class="tl-mark">85%</span>
+        </div>
+      </div>
+      <div class="tl-item right">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <span class="tl-date">Apr 2025</span>
+          <h4>Final Evaluation</h4>
+          <p>Benchmarked accuracy, wrote up results, prepared the final defence.</p>
+          <span class="tl-mark">100%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= RESULTS ============= -->
+<section class="section" id="results">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Our Results</p>
+      <h2>What the <span class="grad-text">Numbers Say</span></h2>
+      <p class="section-sub">Measured metrics from the trained pipelines, evaluation runs and field captures.</p>
+    </div>
+
+    <h3 class="sub-h center">Binary Grader &mdash; ML Model Comparison</h3>
+    <p class="results-note">10 classical models trained with 5-fold stratified CV on a session-stratified 80/20 split.</p>
+    <div class="results-table-wrap">
+      <table class="results-table">
+        <thead>
+          <tr>
+            <th>Model</th><th>Train</th><th>Test</th><th>Precision</th><th>Recall</th><th>F1</th><th>CV Mean</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="winner"><td><strong>AdaBoost</strong> <span class="pill">Best</span></td><td>100%</td><td>96.36%</td><td>96.56%</td><td>96.36%</td><td>96.31%</td><td>96.36%</td></tr>
+          <tr><td>Random Forest</td><td>100%</td><td>94.55%</td><td>94.54%</td><td>94.55%</td><td>94.51%</td><td>94.09%</td></tr>
+          <tr><td>Gradient Boosting</td><td>100%</td><td>94.55%</td><td>94.97%</td><td>94.55%</td><td>94.42%</td><td>96.36%</td></tr>
+          <tr><td>Decision Tree</td><td>100%</td><td>94.55%</td><td>94.97%</td><td>94.55%</td><td>94.42%</td><td>95.45%</td></tr>
+          <tr><td>Logistic Regression</td><td>92.27%</td><td>90.91%</td><td>91.74%</td><td>90.91%</td><td>91.04%</td><td>89.09%</td></tr>
+          <tr><td>SVM (RBF)</td><td>96.36%</td><td>89.09%</td><td>89.57%</td><td>89.09%</td><td>89.21%</td><td>86.36%</td></tr>
+          <tr><td>SVM (Linear)</td><td>93.64%</td><td>85.45%</td><td>86.90%</td><td>85.45%</td><td>85.72%</td><td>90.45%</td></tr>
+          <tr><td>KNN</td><td>92.73%</td><td>85.45%</td><td>85.29%</td><td>85.45%</td><td>85.25%</td><td>86.36%</td></tr>
+          <tr><td>MLP Neural Network</td><td>100%</td><td>85.45%</td><td>86.90%</td><td>85.45%</td><td>85.72%</td><td>88.64%</td></tr>
+          <tr><td>Naive Bayes</td><td>84.55%</td><td>80.00%</td><td>85.24%</td><td>80.00%</td><td>80.49%</td><td>85.45%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub-h center">Headline Metrics</h3>
+    <div class="grid grid-3">
+      <div class="metric">
+        <h3>YOLOv8s + SAHI Detection</h3>
+        <div class="bar"><div class="bar-fill" style="width:32.5%"></div></div>
+        <p><strong>32.5%</strong> mAP@0.5 across 7 classes &middot; best F1 = 0.29 at conf 0.109. Per-class AP &mdash; Fresh_Bud_2: 0.578, Coarse_pluck: 0.553, Old_Leaf: 0.431.</p>
+      </div>
+      <div class="metric">
+        <h3>AdaBoost Grader</h3>
+        <div class="bar"><div class="bar-fill" style="width:96.36%"></div></div>
+        <p><strong>96.36%</strong> test accuracy on 55 held-out samples &middot; 17/19 high_quality, 36/36 medium_quality &middot; 0 false positives.</p>
+      </div>
+      <div class="metric">
+        <h3>Hybrid RAG Retrieval</h3>
+        <div class="bar"><div class="bar-fill" style="width:100%"></div></div>
+        <p><strong>MRR = 1.00</strong> &middot; P@1 = 1.00 &middot; R@5 = 1.00 &middot; NDCG@5 = 1.00 with FAISS + BM25 + RRF (&alpha;=0.5).</p>
+      </div>
+      <div class="metric">
+        <h3>Mobile Capture Quality</h3>
+        <div class="bar"><div class="bar-fill" style="width:78.4%"></div></div>
+        <p><strong>78.4%</strong> image pass rate after 5 quality gates &middot; blur rejections dropped from ~25% to 8% post-deployment.</p>
+      </div>
+      <div class="metric">
+        <h3>TF-Lite Leaf Segmentation</h3>
+        <div class="bar"><div class="bar-fill" style="width:94.2%"></div></div>
+        <p><strong>94.2%</strong> detection rate, 3.1% false positives. HSV fallback: 82.7% / 8.5% on older devices.</p>
+      </div>
+      <div class="metric">
+        <h3>Feature Engineering</h3>
+        <div class="bar"><div class="bar-fill" style="width:44.6%"></div></div>
+        <p><strong>25 of 56</strong> features selected via SelectKBest (ANOVA F-test). Top drivers: lab_a_mean (0.22), shape_mean_solidity (0.21), lab_b_mean (0.15).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= DOCUMENTS ============= -->
+<section class="section section-alt" id="documents">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Our Documents</p>
+      <h2>Project <span class="grad-text">Deliverables</span></h2>
+      <p class="section-sub">Reports, methodology notes, and presentations.</p>
+    </div>
+
+    <div class="docs-grid">
+      <a class="doc" href="#"><i class="fa-solid fa-file-pdf"></i><span>Project Proposal</span></a>
+      <a class="doc" href="#"><i class="fa-solid fa-file-lines"></i><span>Literature Review</span></a>
+      <a class="doc" href="#"><i class="fa-solid fa-file-lines"></i><span>Methodology Section</span></a>
+      <a class="doc" href="#"><i class="fa-solid fa-file-pdf"></i><span>Final Research Paper</span></a>
+      <a class="doc" href="#"><i class="fa-solid fa-file-powerpoint"></i><span>Tea Research PPT (v1)</span></a>
+      <a class="doc" href="#"><i class="fa-solid fa-file-powerpoint"></i><span>Final Defence Slides</span></a>
+      <a class="doc" href="#"><i class="fa-solid fa-file-lines"></i><span>Component Documentation</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============= TEAM ============= -->
+<section class="section" id="team">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Meet Our Team</p>
+      <h2>The People Behind <span class="grad-text">TeaVision</span></h2>
+      <p class="section-sub">Supervisors and student researchers driving the project.</p>
+    </div>
+
+    <h3 class="sub-h center">Supervisors</h3>
+    <div class="grid grid-3">
+      <div class="member">
+        <div class="avatar"><i class="fa-solid fa-user-tie"></i></div>
+        <h4>Supervisor</h4>
+        <p>Lead Academic Supervisor</p>
+        <span class="org">SLIIT</span>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <div class="member">
+        <div class="avatar"><i class="fa-solid fa-user-tie"></i></div>
+        <h4>Co-Supervisor</h4>
+        <p>Co-Supervisor</p>
+        <span class="org">SLIIT</span>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <div class="member">
+        <div class="avatar"><i class="fa-solid fa-user-tie"></i></div>
+        <h4>External Supervisor</h4>
+        <p>Industry Mentor &mdash; Tea Sector</p>
+        <span class="org">External</span>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <h3 class="sub-h center">Research Team</h3>
+    <div class="grid grid-4">
+      <div class="member">
+        <div class="avatar"><i class="fa-solid fa-user-graduate"></i></div>
+        <h4>Team Leader</h4>
+        <p>IT22154576 &mdash; Detection &amp; RAG</p>
+        <span class="org">SLIIT</span>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <div class="member">
+        <div class="avatar"><i class="fa-solid fa-user-graduate"></i></div>
+        <h4>Member</h4>
+        <p>ML Grading Subsystem</p>
+        <span class="org">SLIIT</span>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <div class="member">
+        <div class="avatar"><i class="fa-solid fa-user-graduate"></i></div>
+        <h4>Member</h4>
+        <p>Mobile Sync &amp; OCR</p>
+        <span class="org">SLIIT</span>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <div class="member">
+        <div class="avatar"><i class="fa-solid fa-user-graduate"></i></div>
+        <h4>Member</h4>
+        <p>Frontend &amp; Visualisations</p>
+        <span class="org">SLIIT</span>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= CONTACT ============= -->
+<section class="section section-alt" id="contact">
+  <div class="container contact-grid">
+    <div>
+      <p class="eyebrow">Contact Us</p>
+      <h2>Have Questions About <span class="grad-text">TeaVision?</span></h2>
+      <p class="section-sub">Reach out for collaboration, dataset access, or demo requests.</p>
+
+      <div class="contact-info">
+        <div><i class="fa-solid fa-envelope"></i><span>ruwanthi822@gmail.com</span></div>
+        <div><i class="fa-solid fa-location-dot"></i><span>SLIIT, Malabe, Sri Lanka</span></div>
+        <div><i class="fa-solid fa-globe"></i><span>TeaVision Research Group</span></div>
+      </div>
+    </div>
+
+    <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks! We will get back to you soon.'); this.reset();">
+      <label>Name<input type="text" required placeholder="Your name" /></label>
+      <label>Email<input type="email" required placeholder="you@example.com" /></label>
+      <label>Message<textarea rows="5" required placeholder="Your message or query"></textarea></label>
+      <button type="submit" class="btn btn-primary">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+    </form>
+  </div>
+</section>
+
+<!-- ============= FOOTER ============= -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="#home" class="brand">
+        <span class="brand-leaf"><i class="fa-solid fa-leaf"></i></span>
+        <span class="brand-text">TeaVision</span>
+      </a>
+      <p class="footer-tag">TeaVision &mdash; Transparent AI for Ceylon Tea Leaf Quality Assessment.</p>
+    </div>
+    <div>
+      <h5>Quick Links</h5>
+      <a href="#research">Research</a>
+      <a href="#solution">Solution</a>
+      <a href="#documents">Documents</a>
+      <a href="#team">Team</a>
+    </div>
+    <div>
+      <h5>Contact</h5>
+      <p>ruwanthi822@gmail.com</p>
+      <p>SLIIT, Malabe, Sri Lanka</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; <span id="year"></span> TeaVision Research Group &middot; All rights reserved.
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
