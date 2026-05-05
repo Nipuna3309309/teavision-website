@@ -652,12 +652,13 @@
         </p>
       </div>
 
-      <form class="contact-form"
-        onsubmit="event.preventDefault(); alert('Thanks! We will get back to you soon.'); this.reset();">
-        <label>Name<input type="text" required placeholder="Enter your name" /></label>
-        <label>Email Address<input type="email" required placeholder="Enter your email" /></label>
-        <label>Message or Query<textarea rows="5" required placeholder="Type your message"></textarea></label>
-        <button type="submit" class="btn btn-primary">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+      <form class="contact-form" id="contactForm">
+        <label>Name<input type="text" name="from_name" required placeholder="Enter your name" /></label>
+        <label>Email Address<input type="email" name="from_email" required placeholder="Enter your email" /></label>
+        <label>Subject<input type="text" name="subject" required placeholder="What is this about?" /></label>
+        <label>Message or Query<textarea rows="5" name="message" required placeholder="Type your message"></textarea></label>
+        <button type="submit" class="btn btn-primary" id="contactBtn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+        <p id="contactStatus" style="margin-top:12px; font-size:0.9rem; display:none;"></p>
       </form>
     </div>
   </section>
@@ -691,6 +692,7 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 

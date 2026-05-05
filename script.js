@@ -69,6 +69,38 @@ const counterIO = new IntersectionObserver((entries) => {
 
 counters.forEach(c => counterIO.observe(c));
 
+// ── EmailJS Contact Form ──
+emailjs.init('sdUb9nObomp06BX2a');
+
+const contactForm = document.getElementById('contactForm');
+const contactBtn = document.getElementById('contactBtn');
+const contactStatus = document.getElementById('contactStatus');
+
+contactForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+  contactBtn.disabled = true;
+  contactBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+  contactStatus.style.display = 'none';
+
+  emailjs.sendForm('service_5a4rbzm', 'template_u2mzov4', contactForm)
+    .then(function () {
+      contactStatus.style.display = 'block';
+      contactStatus.style.color = '#4ade80';
+      contactStatus.textContent = '✓ Message sent successfully! We will get back to you soon.';
+      contactForm.reset();
+      contactBtn.disabled = false;
+      contactBtn.innerHTML = 'Send Message <i class="fa-solid fa-paper-plane"></i>';
+    })
+    .catch(function (err) {
+      console.error('EmailJS error:', err);
+      contactStatus.style.display = 'block';
+      contactStatus.style.color = '#f87171';
+      contactStatus.textContent = '✗ Failed to send. Please try again or email us directly.';
+      contactBtn.disabled = false;
+      contactBtn.innerHTML = 'Send Message <i class="fa-solid fa-paper-plane"></i>';
+    });
+});
+
 // Animate metric bars when visible
 const bars = document.querySelectorAll('.bar-fill');
 bars.forEach(bar => {
