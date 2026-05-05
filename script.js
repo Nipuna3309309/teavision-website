@@ -90,7 +90,7 @@ counters.forEach(c => counterIO.observe(c));
       message: contactForm.message.value
     };
 
-    emailjs.send('service_5a4rbzm', 'template_u2mzov4', templateParams)
+    emailjs.send('service_5a4rbzm', 'template_xo3ujvu', templateParams)
       .then(function () {
         contactStatus.style.display = 'block';
         contactStatus.style.color = '#4ade80';
@@ -100,10 +100,12 @@ counters.forEach(c => counterIO.observe(c));
         contactBtn.innerHTML = 'Send Message <i class="fa-solid fa-paper-plane"></i>';
       })
       .catch(function (err) {
-        console.error('EmailJS error:', err);
+        console.error('EmailJS full error:', JSON.stringify(err));
+        console.error('Error text:', err.text);
+        console.error('Error status:', err.status);
         contactStatus.style.display = 'block';
         contactStatus.style.color = '#f87171';
-        contactStatus.textContent = '✗ Failed to send: ' + (err.text || err.message || 'Unknown error');
+        contactStatus.textContent = '✗ Error ' + err.status + ': ' + err.text;
         contactBtn.disabled = false;
         contactBtn.innerHTML = 'Send Message <i class="fa-solid fa-paper-plane"></i>';
       });
